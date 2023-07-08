@@ -1,6 +1,7 @@
 .contacts-list {
   list-style-type: disc;
   width: 400px;
+  max-width: 100%;
 }
 
 .contacts-list li {
