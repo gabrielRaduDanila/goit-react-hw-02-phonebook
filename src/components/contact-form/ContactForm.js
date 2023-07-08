@@ -21,15 +21,13 @@ class ContactForm extends Component {
       this.setState({ name: typedName });
     }
     if (selectedInput.name === 'number') {
-      const pattern = /^\d+$/;
-      //   /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/;
+      const pattern = /^\+?[\d\s-]+$/;
       const typedNumber = selectedInput.value;
-      const typedNumberTrans = Number(typedNumber);
       let isNumberValid = pattern.test(typedNumber);
       if (!isNumberValid && typedNumber.length > 0) {
         alert(selectedInput.title);
       }
-      this.setState({ number: typedNumberTrans });
+      this.setState({ number: typedNumber });
     }
   };
 
