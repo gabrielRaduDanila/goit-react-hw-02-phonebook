@@ -61,6 +61,9 @@ export class App extends Component {
             removeContact={this.removeContact}
           />
         )}
+        {contacts.length === 0 && filter.length === 0 && (
+          <h3>Add contacts to be displayed</h3>
+        )}
       </div>
     );
   }
